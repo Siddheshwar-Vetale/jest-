@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Button from "./Component/Button";
 
 function App() {
+  function handleClick() {
+    // console.log("clicked");
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="flex justify-center mt-96">
+        <div>
+          <Button
+            variant="primary"
+            size="small"
+            onClick={handleClick}
+            disabled={false}
+          />
+        </div>
+        <div>
+          <Button
+            variant="secondary"
+            size="small"
+            onClick={handleClick}
+            disabled={false}
+          />
+        </div>
+        <div>
+          <Button
+            variant="tertary"
+            size="small"
+            onClick={handleClick}
+            disabled={true}
+          />
+        </div>
+      </div>
+    </>
   );
 }
 
